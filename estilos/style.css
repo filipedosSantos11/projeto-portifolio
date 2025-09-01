@@ -8,7 +8,54 @@
   --fundo-card
 */
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo-principal: #f5f5f5;
+  --texto: #222222; 
+  --texto-inverso: #ffffff;
+  --destaque: #0077ff;
+  --destaque-inverso: #66bbff;
+  --fundo-card: #ffffff;
+}
+
 body {
-  background-color: lightcyan;
-  color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5em;
+  background-color: var(--fundo-principal);
+  color: var(--texto);
+}
+
+header {
+  background-color: var(--destaque);
+  color: var(--texto);
+  padding: 10px;
+  display: flex; /* ativei o flexbox para header */
+  justify-content: flex-end; /* alinhei os items na horizontal */
+  align-items: center; /* alinhei os items na vertical */
+}
+
+nav#menu ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+nav#menu a {
+  text-decoration: none;
+  color: var(--texto-inverso);
+  font-weight: 600; /* peso da fonte */
+  padding: 12px 15px; /* cima e baixo / laterais */
+  border-radius: 5px;
+  transition: background-color .5s, color .5s;
+}
+
+nav#menu a:hover {
+  background-color: var(--destaque-inverso);
+  color: var(--destaque);
+  
 }
