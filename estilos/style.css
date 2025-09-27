@@ -148,3 +148,44 @@ article h2 {
   height: 100%;
   border-radius: 8px;
 }
+
+#skill-conteiner {
+  display: grid;
+  grid-template-columns: 1fr; /* uma coluna */
+  gap: 30px; /* espaçamento entre linhas */
+}
+
+#skill-conteiner .info {
+  display: flex;
+  justify-content: space-between; /* para alinhar os items - nos cantos */
+  align-items: center;
+}
+
+#skill-conteiner .nome {
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#skill-conteiner .porcent {
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skill-conteiner .barra {
+  width: 100%;
+  height: 8px;
+  background-color: var(--fundo-principal);
+  border-radius: 4px;
+}
+
+#skill-conteiner .progresso {
+  height: 100%;
+  background-color: var(--destaque-inverso);
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) { /* quando eu aumentar a largura da tela, vai aparecer duas colunas */
+  #skill-conteiner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
