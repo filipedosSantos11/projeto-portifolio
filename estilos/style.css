@@ -215,8 +215,71 @@ article h2 {
   font-size: 1.1em;
 }
 
+#projeto-conteiner {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-conteiner .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-color 0.5s, border-width 0.5s;
+}
+
+#projeto-conteiner .projeto:hover {
+  border-color: var(--destaque-inverso);
+  border-left-width: 15px;
+  cursor: pointer;
+}
+
+#projeto-conteiner .foto {
+  width: 100%;
+  aspect-ratio: 16/9; /* pra ficar puxadinho */
+  object-fit: cover; /* pra não distorcer */
+  overflow: hidden; /* pra não mostrar o conteúdo vazado */
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--destaque-inverso);
+}
+
 @media screen and (min-width: 768px) { /* quando eu aumentar a largura da tela, vai aparecer duas colunas */
   #skill-conteiner {
     grid-template-columns: 1fr 1fr;
+  }
+
+  #projeto-conteiner .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-conteiner .projeto-info {
+    max-width: 80%;
+  }
+
+  #projeto-conteiner .foto {
+    aspect-ratio: 1/1; /* pra imagem ficar quadrada quando crescer a tela */
+    max-width: 20%;
+    max-height: 200px;
   }
 }
