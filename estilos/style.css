@@ -37,6 +37,9 @@ header {
   display: flex; /* ativei o flexbox para header */
   justify-content: flex-end; /* alinhei os items na horizontal */
   align-items: center; /* alinhei os items na vertical */
+  position: sticky; /* fixei o menu no topo - stichy significa grudado */
+  top: 0; /* distância do topo */
+  z-index: 1; /* antes de colocar o z-index, o vídeo ficava sobre o menu - agora está resolvido, o menu fica acima do vídeo */
 }
 
 nav#menu ul {
